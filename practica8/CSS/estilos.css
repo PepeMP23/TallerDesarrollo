@@ -1,0 +1,46 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    float: left; /*Sirve para juntar los elementos al mismo nivel*/
+    width: 20%;
+    height: 780px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #DCDCDC;
+}
+
+article{
+    float: left; /*Sirve para juntar los elementos al mismo nivel*/
+    width: 80%;
+    height: 780px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F8F8FF;
+}
+
+h1, h2, p {
+    margin-left: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.inicio, .contacto{
+    color: white;
+}
+
+.inicio{
+    background-color: blue;
+}
+
+.contacto{
+    background-color: #696969;
+}
