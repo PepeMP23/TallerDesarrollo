@@ -1,0 +1,71 @@
+.flex-container{
+    display: flex;
+    background-color: blue;
+    height: 500px;
+    /* Elementos colocados en formato de renglon invertidos*/
+    /*flex-direction: row-reverse;*/
+    flex-direction: column;
+    /*justify-content: center;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-around;*/
+    justify-content: space-between;
+}
+
+.flex-container div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.flex-container2{
+    display: flex;
+    background-color: red;
+    flex-direction: column-reverse;
+}
+
+.flex-container2 div{
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    /* Espacio que va a requerir por encima y debajo cada letra */
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.flex-container3{
+    display: flex;
+    height: 600px;
+    /* Acomoda el ancho del contenedor con respecto al ancho de la pantalla*/
+    /* En otras palabras es como un salto de linea automatico*/
+    flex-wrap: wrap;
+    /* Pone los elementos del contenido en reversa*/
+    /*flex-wrap: wrap-reverse;*/
+    /*align-content: space-between;*/
+    /* Centrado de elementos del contenido entre el espacio que tenemos*/
+    /*align-content: space-around;
+    align-content: stretch;
+    align-content: center;*/
+    /* Coloca los elementos al inicio
+    align-content: flex-start;*/
+    align-content: flex-end;
+    background-color: purple;
+}
+
+.flex-container3 div{
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    /* Espacio que va a requerir por encima y debajo cada letra */
+    line-height: 75px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container3{
+        width: 25%;
+    }
+}
