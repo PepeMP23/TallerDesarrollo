@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.columna{
+    flex: 25%;
+    max-width: 25%;
+}
+
+img{
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .columna {
+      flex: 33%;
+      max-width: 33%;
+    }
+  }
+
+@media (max-width: 900px) {
+    .columna {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .columna {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
