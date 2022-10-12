@@ -1,3 +1,30 @@
+*{
+    color: black;
+}
+
 h1{
     font-size: 2em;
+}
+
+.nav-link{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+#piedepagina{
+    background-color: #003566;
+}
+
+#piedepagina h3{
+    color: #ffff00;
+    font-size: large;
+}
+
+.iconos-redes{
+    font-size:2em;
+    padding-right: 0.5em;
+}
+
+#piedepagina i{
+    color: #fff;
 }
