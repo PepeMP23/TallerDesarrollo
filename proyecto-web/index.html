@@ -19,7 +19,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light" id="inicio">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="imagenes/Logotipo.png" alt="Logotipo" width="25%">
@@ -29,6 +29,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto">
+
+              <!--
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -36,7 +38,7 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
               
-              <!-- DROPDOWN
+               DROPDOWN
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -48,10 +50,23 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-              -->
+              
 
               <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
+              </li>
+              -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#formaContacto">Contacto</a>
               </li>
             </ul>
 
@@ -126,7 +141,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h1>¿Qué es DinoCode?</h1>
+            <h1 id="Nosotros">¿Qué es DinoCode?</h1>
             <h2 class="text-warning">Este es un subtitulo</h2>
           </div>
         </div>
@@ -154,7 +169,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h2>NUESTROS PRODUCTOS</h2>
+            <h2 id="Productos">NUESTROS PRODUCTOS</h2>
           </div>
         </div>
         <div class="row">
@@ -194,6 +209,154 @@
         </div>
       </div>
     </div>
+
+  <form action="" name="formaContacto" id="formaContacto">
+    <fieldset>
+      <div class="container-fluid py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">FORMA DE CONTACTO</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p>Agradecemos que nos envies tus comentarios preguntas y sugerencias. Por favor llena la siguiente forma con tus datos:</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+              <div class="row">
+                <div class="col-6">
+                  <input type="text" class="form-control" required name="nombre" id="nombre" placeholder="Nombre completo" >
+                </div>
+                <div class="col-6">
+                  <input type="tel" class="form-control" required name="telefono" id="telefono" placeholder="Telefono">
+                </div>
+                <div class="col-12 py-2 text-center">
+                  <input type="email" class="form-control" required name="email" id="email" placeholder="Email">
+                </div>
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <textarea name="comentarios" class="form-control" id="floatingInput" cols="30" rows="10" placeholder="Comentarios" required></textarea>
+                    <label for="floatingInput">Comentarios</label>
+                  </div>
+                </div>
+                <div class="col-12 py-2 text-center">
+                  <input type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">CARACTERISTICAS DE LOS PAQUETES</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <table class="table text-center table-bordered table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Paquete 1</th>
+                <th scope="col">Paquete 2</th>
+                <th scope="col">Paquete 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5 alumnos</td>
+                <td>50 alumnos</td>
+                <td>500 alumnos</td>
+              </tr>
+              <tr>
+                <td>2 semanas</td>
+                <td>4 semanas</td>
+                <td>6 semanas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-success" role="alert">
+            Oferta: Si compras tu paquete ahora, recibiras un peluche coleeccinable de nuestra mascota Dino
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <img src="imagenes/LogotipoDino.png" class="img-thumbnail shadow w-100" alt="DinoPeps">
+        </div>
+        <div class="col-12 col-md-4"> 
+          <img src="imagenes/LogotipoDino.png" class="img-thumbnail shadow w-100 opacity-25" alt="DinoPeps">
+        </div>
+        <div class="col-12 col-md-4">
+          <img src="imagenes/LogotipoDino.png" class="img-thumbnail shadow w-100 opacity-50" alt="DinoPeps">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Paquete #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Paquete #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Paquete #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="container-fluid text-white p-5" id="piedepagina">
       <footer>
