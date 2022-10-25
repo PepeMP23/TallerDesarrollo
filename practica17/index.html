@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1 id="titulo">Hola JavaScript</h1>
+    <p id="texto">Este es un parrafo en html</p>
+    <ul id="colores">
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Azul</li>
+    </ul>
+
+    <!-- LA EJECUCION DE JS ES EN CASCADA (DE ARRIBA HACIA A ABAJO)-->
+    <script>
+        // No es tan necesario declarar variables en JS
+        // Pero es una buena practica
+        var titulo;
+        titulo = document.getElementById("titulo");
+        titulo.innerHTML = "Hola JS";
+        
+        var texto;
+        texto = document.getElementById("texto");
+        texto.style.fontSize = "50px";
+        
+        var colores;
+        colores = document.getElementById("colores");
+        colores.style.display = "none";
+        colores.style.display = "block";
+
+        function cambiarColor(){
+            // SCOPE o ALCANCE
+            console.log("Si entro a esta funcion")
+            colores.style.color = "#ff0000";
+        }
+
+        cambiarColor();
+
+        document.write("Este es un número generado con JS: ");
+        document.write(50+60);
+
+        // window.alert("Esta es una alerta");
+
+        /*
+        ESTE ES UN COMENTARIO DE MULTIPLES LINEAS EN JS
+        */
+
+        var cadena = "Hola consola de JS";
+        console.log("Solo para desarrolladores");
+
+        let a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        console.log(c);
+
+        var radio = 10;
+        const PI = 3.1416;
+
+        function calcularArea(radio){
+            let areaTemporal = PI * radio * radio;
+            return areaTemporal;
+        }
+
+        // calcularArea(radio);
+        // console.log(calcularArea(radio));
+
+        var area = calcularArea(100);
+        console.log(area);
+
+        let numero = 10.50;
+        var numeroNuevo = 10;
+
+        let soyCadena = "Jejeje"; // Comillas dobles
+        let soyCadena2 = 'Jejeje'; // Comillas simples
+        let soyCadena3 = `Jejeje`; // Comillas inveritdas
+
+        let $multi_plica = numero * numeroNuevo;
+        console.log("Valor: " + $multi_plica);
+
+        let sinValor;
+        console.log(sinValor);
+
+        var auto="BMW";
+        var auto;
+        console.log(auto);
+        // LET HOISTING 
+        // Cuando el resultado es el mismo sin importar que la variable la declaremos despues de utilizarla
+
+        /*
+        let auto = "BMW";
+        let auto;
+        console.log(auto);
+        */
+
+        // Ejemplo de API's
+        // const URL = "https://reqres.in/api/users"
+
+        let variableLocal = 10;
+
+        {
+            let variableLocal = 2;
+            console.log("Primero: " + variableLocal);
+        }
+
+        console.log("Segundo: " + variableLocal);
+
+        const PI_2 = 3.1416;
+
+        const autos = ["VW", "Chevrolet", "BMW"];
+
+        console.log(autos);
+        console.log(autos.length);
+        console.log(autos[1]);
+        console.log(autos[0]);
+
+        const autoNuevo = {
+            tipo : "Toyota Camry", 
+            modelo : "500", 
+            color : "blanco"
+        };
+
+        console.log(autoNuevo.color);
+        autoNuevo.color = "rojo";
+        console.log(autoNuevo.color);
+        autoNuevo.propietario = "Juan Perez";
+        console.log(autoNuevo);
+
+        var x1 = 4.5
+        console.log(typeof x1);
+
+        var y1 = 10
+        console.log(typeof y1);
+
+        var z1 = 'hola'
+        console.log(typeof z1);
+
+        console.log(typeof autoNuevo);
+        console.log(typeof autos);
+
+        console.log( 3 > 10);
+
+        // Evalua la letra inicial
+        console.log("Thor" < "Iron Man");
+
+        console.log("a" < "b");
+        console.log("de" < "bc");
+
+        console.log(true && false); // false
+        console.log(true && true); // true
+
+        console.log(true || true); // true
+
+        //OPERADOR TERNARIO
+        //Sintaxis: 
+        // condicion ? expresion1 (true) : expresion2 (false)
+        console.log(true ? 1 : 2); // 1
+        console.log(false ? 1 : 2); // 2
+
+        console.log( 8 * null ); // 0
+
+        console.log("5"-1);
+
+    </script>
+</body>
+</html>
