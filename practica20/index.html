@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <button id="boton1" onclick="muestraHora()">1.- ¿Qué hora es?</button>
+    <p id="hora"></p>
+
+    <button id="boton2" onmouseover="muestraHora2()">2.- ¿Qué hora es?</button>
+    <p id="hora2"></p>
+
+    <button id="boton3">3.- ¿Qué hora es?</button>
+    <p id="hora3"></p>
+
+    <button id="boton4">4.- ¿Qué hora es?</button>
+    <p id="hora4"></p>
+
+    <button id="boton5">5.- ¿Qué hora es?</button>
+    <p id="hora5"></p>
+
+    <h2 id="valor"></h2>
+
+    <script>
+        function muestraHora(){
+            let hora = document.getElementById('hora');
+            hora.innerHTML = Date();
+        }
+
+        function muestraHora2(){
+            let hora = document.getElementById('hora2');
+            hora.innerHTML = Date();
+        }
+
+        var boton3 = document.getElementById('boton3');
+        // Segundo parametro es una funcion que declararemos despues
+        boton3.addEventListener("click", muestraHora3);
+        // Declaracion de funciones
+        function muestraHora3(){
+            let hora = document.getElementById('hora3');
+            hora.innerHTML = "Usando addEventListener " + Date();
+        }
+
+        var boton4 = document.getElementById('boton4');
+        // Funcion anónima, la funcion va dentro, porque es mas practico.
+        boton4.addEventListener("click", function(){
+            let hora = document.getElementById('hora4');
+            hora.innerHTML = "Usando función anónima " + Date();
+        });
+
+        var boton5 = document.getElementById('boton5');
+        // Funcion arrow, eliminamos la palabra reservada "function" y agregamos "=>", es lo mismo pero mas elegante
+        boton5.addEventListener("click", () => {
+            let hora = document.getElementById('hora5');
+            hora.innerHTML = "Usando función arrow " + Date();
+        });
+
+        document.addEventListener("mousemove", () => {
+            let valor = document.getElementById('valor');
+            valor.innerHTML = Math.random() * 100;
+        })
+
+    </script>
+
+</body>
+</html>
